@@ -78,30 +78,38 @@ const Calculator = () => {
         <div className="main calculator">
             <h1 className="h1">TypeScript Calculator</h1>
 
-            <label for="display" className="container_form_label">Result</label>
+            <label htmlFor="display" className="container_form_label">Result</label>
             <input type="text" value={currentInput} id="display" className="container_form_input" readOnly />
 
             <div id="buttons">
-                <button onClick={() => appendNumber("1")} className="number btn">1</button>
-                <button onClick={() => appendNumber("2")} className="number btn">2</button>
-                <button onClick={() => appendNumber("3")} className="number btn">3</button>
-                <button onClick={() => chooseOperator("+")} className="operator btn btn-success">+</button>
-
-                <button onClick={() => appendNumber("4")} className="number btn">4</button>
-                <button onClick={() => appendNumber("5")} className="number btn">5</button>
-                <button onClick={() => appendNumber("6")} className="number btn">6</button>
-                <button onClick={() => chooseOperator("-")} className="operator btn btn-danger">-</button>
-
-                <button onClick={() => appendNumber("7")} className="number btn">7</button>
-                <button onClick={() => appendNumber("8")} className="number btn">8</button>
-                <button onClick={() => appendNumber("9")} className="number btn">9</button>
-                <button onClick={() => chooseOperator("*")} className="operator btn btn-info">*</button>
-
-                <button onClick={() => appendNumber("0")} className="number btn">0</button>
-                <button onClick={() => appendNumber(".")} className="number btn">.</button>
-                <button onClick={clear} className="clear btn btn-danger">C</button>
-                <button onClick={() => chooseOperator("/")} className="operator btn btn-warning">/</button>
-
+                <div className="button-group">
+                    <button onClick={() => appendNumber("1")} className="number btn">1</button>
+                    <button onClick={() => appendNumber("2")} className="number btn">2</button>
+                    <button onClick={() => appendNumber("3")} className="number btn">3</button>
+                    <button onClick={() => chooseOperator("+")} className="operator btn btn-success">+</button>
+                </div>
+               
+                <div className="button-group">
+                    <button onClick={() => appendNumber("4")} className="number btn">4</button>
+                    <button onClick={() => appendNumber("5")} className="number btn">5</button>
+                    <button onClick={() => appendNumber("6")} className="number btn">6</button>
+                    <button onClick={() => chooseOperator("-")} className="operator btn btn-danger">-</button>
+                </div>
+                
+                <div className="button-group">
+                    <button onClick={() => appendNumber("7")} className="number btn">7</button>
+                    <button onClick={() => appendNumber("8")} className="number btn">8</button>
+                    <button onClick={() => appendNumber("9")} className="number btn">9</button>
+                    <button onClick={() => chooseOperator("*")} className="operator btn btn-info">*</button>
+                </div>
+              
+                <div className="button-group">
+                    <button onClick={() => appendNumber("0")} className="number btn">0</button>
+                    <button onClick={() => appendNumber(".")} className="number btn">.</button>
+                    <button onClick={clear} className="clear btn btn-danger">C</button>
+                    <button onClick={() => chooseOperator("/")} className="operator btn btn-warning">/</button>
+                </div>
+                
                 <button onClick={compute} className="equals btn">=</button>
             </div>
         </div>
