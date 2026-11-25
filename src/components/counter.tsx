@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import '../css/components/counter.css';
+
 const Counter = () => {
     const [count, setCount] = useState<number>(0);
 
@@ -16,11 +18,11 @@ const Counter = () => {
     };
 
     return (
-        <div className="counter">
-            <h1 class="h1">Counter</h1>
+        <div className="main">
+            <h1 className="h1">Counter</h1>
 
             <div id="counter" className="counter">
-                <p class="h2">{count}</p>
+                <p className="h2">{count}</p>
             </div>
 
             <div className="buttons">

@@ -1,22 +1,33 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
 
-import Counter from "./components/counter";
+import ComponentList from './components/componentList';
 
-import './css/App.css'
+import Counter from "./components/counter";
+import Calculator from "./components/calculator"
+
+import './css/App.css';
+import './css/componentList.css';
 
 function App() {
-  /*const [count, setCount] = useState(0)*/
 
   return (
     <>
-      <Header />
-      <section id="center" className="main">
-        <Counter />
-      </section>
-      <Footer />
+      <BrowserRouter>
+        <Header />
+
+        {/*routes*/}
+      
+        <Routes>
+          <Route path="/" element={<ComponentList />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/calculator" element={<Calculator />} />
+        </Routes>
+      
+        <Footer />
+      </BrowserRouter>
 
       
 
