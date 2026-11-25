@@ -19,10 +19,11 @@ const ComponentList = () => {
                     <p>Basic calculator with operators and ability to clear previous entries.</p>
                 </Link>
 
-                <div className="components-col bg-green c-white">
-                    <h2 className="h2">Project 3</h2>
-                    <p>big old test</p>
-                </div> 
+                <Link to="/quiz" className="components-col bg-green c-white">
+                    <h2 className="h2">Quiz Project</h2>
+                    <p>General knowledge quiz.</p>
+                </Link>
+                 
                 <div className="components-col bg-yellow">
                     <h2 className="h2">Project 4</h2>
                     <p>big old test</p>

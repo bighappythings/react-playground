@@ -6,7 +6,8 @@ import Footer from "./components/footer";
 import ComponentList from './components/componentList';
 
 import Counter from "./components/counter";
-import Calculator from "./components/calculator"
+import Calculator from "./components/calculator";
+import Quiz from "./components/quiz";
 
 import './css/App.css';
 import './css/componentList.css';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<ComponentList />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/quiz" element={<Quiz />} />
         </Routes>
       
         <Footer />
